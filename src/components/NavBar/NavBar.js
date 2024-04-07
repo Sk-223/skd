@@ -1,17 +1,19 @@
 import React from 'react';
+import Logo from '../Logo/Logo.js';
+import NavBar from '../NavBar/NavBar.js';
+import SearchIcon from '../SearchIcon';
 import styles from './NavBar.module.css'; // Import CSS module
 
-const NavBar = () => {
+const Header = () => {
   return (
-    <nav className={styles.navbar}> {/* Apply CSS module class */}
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <header className={styles.header}>
+      <div className={styles.container}>
+        <Logo />
+        <NavBar />
+        <SearchIcon />
+      </div>
+    </header>
   );
 }
 
-export default NavBar;
+export default Header;
